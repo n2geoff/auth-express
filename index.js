@@ -4,7 +4,7 @@ var _user = {};
 var _realm = '';
 
 function unauthorized(res) {
-    realm = _realm || 'My Realm';
+    var realm = _realm || 'My Realm';
 
     res.set('WWW-Authenticate', 'Basic realm="' + realm + '"');
     res.status(401).end('Unauthorized');
